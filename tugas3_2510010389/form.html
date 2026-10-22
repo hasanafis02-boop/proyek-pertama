@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendataan Mahasiswa - Tugas 3</title>
+</head>
+<body>
+    <header>
+        <h1>Formulir Pendataan Mahasiswa</h1>
+        <nav>
+            <a href="data.html">Data Mahasiswa</a> | 
+            <a href="form.html">Formulir Pendataan</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tambah Data Mahasiswa Baru</h2>
+        <form action="#" method="POST">
+            
+            <!-- Field 1: text (Nama Lengkap) -->
+            <p>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </p>
+
+            <!-- Field 2: text (NPM) -->
+            <p>
+                <label for="npm">NPM:</label><br>
+                <input type="text" id="npm" name="npm" placeholder="Masukkan 10 digit NPM" required>
+            </p>
+
+            <!-- Field 3: email -->
+            <p>
+                <label for="email">Email Kampus:</label><br>
+                <input type="email" id="email" name="email" placeholder="mahasiswa@domain.ac.id" required>
+            </p>
+
+            <!-- Field 4: password -->
+            <p>
+                <label for="password">Kata Sandi Akun:</label><br>
+                <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required>
+            </p>
+
+            <!-- Field 5: number dengan min & max (Semester) -->
+            <p>
+                <label for="semester">Semester:</label><br>
+                <input type="number" id="semester" name="semester" min="1" max="14" placeholder="1 - 14" required>
+            </p>
+
+            <!-- Field 6: date (Tanggal Lahir) -->
+            <p>
+                <label for="tgl_lahir">Tanggal Lahir:</label><br>
+                <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+            </p>
+
+            <!-- Field 7: select dengan minimal 4 opsi (Program Studi) -->
+            <p>
+                <label for="prodi">Program Studi:</label><br>
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- Pilih Program Studi --</option>
+                    <option value="ti">Teknik Informatika</option>
+                    <option value="si">Sistem Informasi</option>
+                    <option value="te">Teknik Elektro</option>
+                    <option value="tm">Teknik Mesin</option>
+                </select>
+            </p>
+
+            <!-- Field 8: radio dengan fieldset & legend (Status Akademik) -->
+            <fieldset>
+                <legend>Status Akademik:</legend>
+                <input type="radio" id="aktif" name="status" value="Aktif" required>
+                <label for="aktif">Aktif</label><br>
+                <input type="radio" id="cuti" name="status" value="Cuti">
+                <label for="cuti">Cuti</label>
+            </fieldset>
+            <br>
+
+            <!-- Field Tambahan: checkbox (min 3 item kegiatan) -->
+            <fieldset>
+                <legend>Klub / Kegiatan yang Diikuti:</legend>
+                <input type="checkbox" id="ukm1" name="ukm[]" value="Pemrograman">
+                <label for="ukm1">Klub Pemrograman</label><br>
+                <input type="checkbox" id="ukm2" name="ukm[]" value="Multimedia">
+                <label for="ukm2">Klub Multimedia</label><br>
+                <input type="checkbox" id="ukm3" name="ukm[]" value="Olahraga">
+                <label for="ukm3">Klub Olahraga</label>
+            </fieldset>
+            <br>
+
+            <!-- Field 9: textarea (Alamat) -->
+            <p>
+                <label for="alamat">Alamat Tempat Tinggal:</label><br>
+                <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Tuliskan alamat lengkap..." required></textarea>
+            </p>
+
+            <!-- Tombol Submit & Reset -->
+            <p>
+                <button type="submit">Simpan Data</button>
+                <button type="reset">Reset Formulir</button>
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Tugas 3 - Pemrograman Web</p>
+    </footer>
+</body>
+</html>

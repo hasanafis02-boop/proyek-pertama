@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Kartu Produk Toko - Tugas 5</title>
+    <!-- Penghubung ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 2. Navbar dengan position: fixed -->
+    <header class="navbar">
+        <div class="nav-container">
+            <span class="logo">Toko Racing HNRacingShop</span>
+            <nav class="nav-links">
+                <a href="#kategori">Beranda</a>
+                <a href="#kategori">Katalog</a>
+                <a href="#kategori">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. Elemen dengan position: sticky (Sub-judul kategori) -->
+    <div class="sticky-category" id="kategori">
+        <h2>Kategori Produk: Aksesoris &amp; Suku Cadang Motor</h2>
+    </div>
+
+    <!-- Konten Utama: Minimal 4 Kartu Produk -->
+    <main class="main-content">
+        <div class="product-grid">
+
+            <!-- Produk 1 -->
+            <div class="product-card">
+                <!-- Badge (position: absolute dengan induk position: relative) -->
+                <span class="badge badge-sale">Diskon 20%</span>
+                
+                <!-- 4. Elemen overflow: hidden + border-radius (Gambar membulat di dalam kartu) -->
+                <div class="image-box">
+                    <img src="helmArai.jpg" alt="Helm Racing Full Face">
+                </div>
+
+                <div class="product-info">
+                    <h3 class="product-title">Helm Racing Full Face</h3>
+                    <p class="product-price">Rp 12.750.000</p>
+                    <button class="btn-buy">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="product-card">
+                <span class="badge badge-new">Baru</span>
+                <div class="image-box">
+                    <img src="sarung tangan.jpg" alt="Sarung Tangan Balap">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sarung Tangan Kulit</h3>
+                    <p class="product-price">Rp 450.000</p>
+                    <button class="btn-buy">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-card">
+                <span class="badge badge-sale">Diskon 15%</span>
+                <div class="image-box">
+                    <img src="kenalpot.jpg" alt="Knalpot Racing">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Knalpot Racing Stainless</h3>
+                    <p class="product-price">Rp 850.000</p>
+                    <button class="btn-buy">Beli Sekarang</button>
+                </div>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="product-card">
+                <span class="badge badge-new">Baru</span>
+                <div class="image-box">
+                    <img src="paddock.jpg" alt="Paddock Stand Motor">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Paddock Stand Motor</h3>
+                    <p class="product-price">Rp 300.000</p>
+                    <button class="btn-buy">Beli Sekarang</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toko Racing Shop. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>

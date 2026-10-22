@@ -1,0 +1,189 @@
+/* === 1. GLOBAL RESET & BOX-SIZING === */
+* {
+    box-sizing: border-box; /* Wajib sesuai ketentuan */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    /* Kompensasi padding agar konten tidak tertutup navbar fixed */
+    padding-top: 80px; 
+}
+
+/* === 2. NAVBAR (POSITION: FIXED) === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+}
+
+/* === 3. ELEMEN STICKY (POSITION: STICKY) === */
+.sticky-category {
+    position: sticky;
+    top: 60px; /* Menempel di bawah navbar fixed */
+    background-color: #e2e8f0;
+    padding: 12px 20px;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sticky-category h2 {
+    font-size: 1.1rem;
+    color: #2d3748;
+}
+
+/* === 4. KONTEN & GRID KARTU PRODUK === */
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* === 5. KARTU PRODUK (BOX MODEL & POSITION) === */
+.product-card {
+    position: relative; /* Induk wajib relative untuk badge absolute */
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 260px; /* Lebar maksimal kartu */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease; /* Hover effect transisi */
+}
+
+/* Hover effect: box-shadow menebal */
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* === 6. BADGE (POSITION: ABSOLUTE) === */
+.badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.badge-sale {
+    background-color: #e53e3e;
+}
+
+.badge-new {
+    background-color: #319795;
+}
+
+/* === 7. GAMBAR DENGAN OVERFLOW: HIDDEN & BORDER-RADIUS === */
+.image-box {
+    width: 100%;
+    height: 160px;
+    overflow: hidden; /* Memotong bagian gambar yang keluar batas */
+    border-radius: 8px; /* Membuat sudut gambar melumat/membulat */
+    background-color: #edf2f7;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .image-box img {
+    transform: scale(1.05); /* Efekzoom halus saat di-hover */
+}
+
+/* === 8. INFORMASI PRODUK & TOMBOL === */
+.product-info {
+    padding-top: 15px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 0.95rem;
+    color: #e53e3e;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    width: 100%;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-buy:hover {
+    background-color: #2b6cb0;
+}
+
+/* === 9. FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a2e;
+    color: #fff;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

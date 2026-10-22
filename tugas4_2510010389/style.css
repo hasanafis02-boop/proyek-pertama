@@ -1,0 +1,101 @@
+/* === 1. WARNA & TATA LETAK UTAMA === */
+body {
+    background-color: #f8f9fa;
+    color: #2b2d42;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Membatasi lebar konten (max-width 720px & margin auto) */
+main, #main-header, footer {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* === 2. TIPOGRAFI HEADER & NAVIGASI === */
+#main-header h1 {
+    font-size: 2rem;
+    color: #2b2d42;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Child selector (>) */
+nav > a {
+    color: #3a86ff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+}
+
+/* Pseudo-class selector (:hover) */
+nav > a:hover {
+    color: #ef233c;
+    text-decoration: underline;
+}
+
+/* === 3. KONTEN ARTIKEL & PARAGRAF === */
+.post-artikel h2 {
+    font-size: 1.5rem;
+    color: #2b2d42;
+    text-align: left;
+    margin-top: 0;
+}
+
+time {
+    color: #8d99ae;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Descendant selector */
+article p {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Pseudo-class selector (:first-child) */
+article p:first-child {
+    font-weight: 400;
+}
+
+/* Class selector */
+.lead-paragraph {
+    font-size: 1.1rem;
+    color: #2b2d42;
+    font-weight: 600;
+}
+
+blockquote {
+    border-left: 4px solid #3a86ff;
+    margin: 20px 0;
+    padding: 12px 20px;
+    background-color: #f1f3f5;
+    font-style: italic;
+    color: #2b2d42;
+}
+
+.tech-list {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* === 4. FOOTER === */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8d99ae;
+    padding: 15px;
+}
